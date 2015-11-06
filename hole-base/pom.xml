@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.liu.springboot</groupId>
+		<artifactId>hole-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>hole-base</artifactId>
+	<version>1.0.1</version>
+	<name>HOLE :: Base</name>
+
+	<dependencies>
+		<!-- spring boot 启动器，包括自动配置支持/logging等 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<!-- spring boot 生产准备功能抱住你监控和管理你的应用程序 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- spring boot 全栈web开发支持，包括Tomcat和springwebmvc -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- 外部项目模块 end -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- 打成jar包的插件 -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
