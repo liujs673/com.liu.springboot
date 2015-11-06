@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.liu.springboot</groupId>
+	<artifactId>hole-parent</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>HOLE :: Parent</name>
+
+	<properties>
+		<!-- 主要依赖库的版本定义 -->
+		<spring-boot-version>1.2.7.RELEASE</spring-boot-version>
+		<!-- Plugin的属性定义 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.7</jdk.version>
+	</properties>
+
+	<!-- 预定义依赖项的version,scope与exclusions,子项目中只需定义groupId 和 artifactId 即可 -->
+	<dependencyManagement>
+
+		<dependencies>
+			<!-- 本地项目 模块 begin -->
+			<dependency>
+				<groupId>com.liu.springboot</groupId>
+				<artifactId>hole-base</artifactId>
+				<version>1.2.0</version>
+			</dependency>
+			<!-- 本地项目 模块 end -->
+
+			<!-- 外部项目模块 begin -->
+			<!-- 自己作parent的pom，不引入parent的Spring -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
+</project>
